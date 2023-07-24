@@ -62,6 +62,8 @@ public class RNGoogleSigninModule extends NativeGoogleSigninSpec {
     public static final String PLAY_SERVICES_NOT_AVAILABLE = "PLAY_SERVICES_NOT_AVAILABLE";
     public static final String ERROR_USER_RECOVERABLE_AUTH = "ERROR_USER_RECOVERABLE_AUTH";
     private static final String SHOULD_RECOVER = "SHOULD_RECOVER";
+    public static final String ONE_TAP_START_FAILED = "ONE_TAP_START_FAILED";
+    public static final String NO_SAVED_CREDENTIAL_FOUND = "NO_SAVED_CREDENTIAL_FOUND";
 
     private PendingAuthRecovery pendingAuthRecovery;
 
