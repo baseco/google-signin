@@ -1,6 +1,8 @@
 package com.reactnativegooglesignin;
 
 import static com.reactnativegooglesignin.PromiseWrapper.ASYNC_OP_IN_PROGRESS;
+import static com.reactnativegooglesignin.RNOneTapSignInModule.NO_SAVED_CREDENTIAL_FOUND;
+import static com.reactnativegooglesignin.RNOneTapSignInModule.ONE_TAP_START_FAILED;
 import static com.reactnativegooglesignin.Utils.createScopesArray;
 import static com.reactnativegooglesignin.Utils.getExceptionCode;
 import static com.reactnativegooglesignin.Utils.getSignInOptions;
@@ -92,8 +94,8 @@ public class RNGoogleSigninModule extends NativeGoogleSigninSpec {
         constants.put(PLAY_SERVICES_NOT_AVAILABLE, PLAY_SERVICES_NOT_AVAILABLE);
 
         // one-tap only
-        constants.put("NO_SAVED_CREDENTIAL_FOUND", "NO_SAVED_CREDENTIAL_FOUND");
-        constants.put("ONE_TAP_START_FAILED", "ONE_TAP_START_FAILED");
+        constants.put(NO_SAVED_CREDENTIAL_FOUND, NO_SAVED_CREDENTIAL_FOUND);
+        constants.put(ONE_TAP_START_FAILED, ONE_TAP_START_FAILED);
         return constants;
     }
 
