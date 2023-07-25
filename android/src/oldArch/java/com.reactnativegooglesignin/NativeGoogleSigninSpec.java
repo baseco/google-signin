@@ -105,12 +105,12 @@ public abstract class NativeGoogleSigninSpec extends ReactContextBaseJavaModule 
       undeclaredConstants.removeAll(obligatoryFlowConstants);
       undeclaredConstants.removeAll(optionalFlowConstants);
       if (!undeclaredConstants.isEmpty()) {
-        throw new IllegalStateException(String.format("Native Module Flow doesn't declare constants: %s $d", undeclaredConstants, obligatoryFlowConstants));
+        throw new IllegalStateException(String.format("Native Module Flow doesn't declare constants: %s $s", undeclaredConstants, obligatoryFlowConstants));
       }
       undeclaredConstants = obligatoryFlowConstants;
       undeclaredConstants.removeAll(constants.keySet());
       if (!undeclaredConstants.isEmpty()) {
-        throw new IllegalStateException(String.format("Native Module doesn't fill in constants: %s $d", undeclaredConstants, obligatoryFlowConstants));
+        throw new IllegalStateException(String.format("Native Module doesn't fill in constants: %s $s", undeclaredConstants, obligatoryFlowConstants));
       }
     }
     return constants;
