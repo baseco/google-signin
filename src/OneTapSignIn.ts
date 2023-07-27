@@ -64,7 +64,7 @@ export const GoogleOneTapSignIn = {
     if (Platform.OS !== 'android') {
       return Promise.reject(unsupportedPlatformError);
     }
-    return OneTapNativeModule?.signOut();
+    return OneTapNativeModule? OneTapNativeModule.signOut() : null;
   },
   createAccount,
 };
