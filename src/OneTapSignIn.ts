@@ -37,7 +37,7 @@ const signIn = (params: OneTapSignInParams): Promise<OneTapUser> => {
   if (Platform.OS !== 'android') {
     return Promise.reject(unsupportedPlatformError);
   }
-  return OneTapNativeModule.signIn({
+  return OneTapNativeModule?.signIn({
     autoSignIn: true,
     filterByAuthorizedAccounts: true,
     passwordRequestSupported: true,
@@ -49,7 +49,7 @@ const createAccount = (params: OneTapSignInParams): Promise<OneTapUser> => {
   if (Platform.OS !== 'android') {
     return Promise.reject(unsupportedPlatformError);
   }
-  return OneTapNativeModule.signIn({
+  return OneTapNativeModule?.signIn({
     autoSignIn: false,
     filterByAuthorizedAccounts: false,
     passwordRequestSupported: false,
@@ -64,7 +64,7 @@ export const GoogleOneTapSignIn = {
     if (Platform.OS !== 'android') {
       return Promise.reject(unsupportedPlatformError);
     }
-    return OneTapNativeModule.signOut();
+    return OneTapNativeModule?.signOut();
   },
   createAccount,
 };
