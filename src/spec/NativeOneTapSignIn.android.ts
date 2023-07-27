@@ -1,5 +1,6 @@
 import type { TurboModule } from 'react-native';
 import { TurboModuleRegistry } from 'react-native';
+import { Platform } from 'react-native';
 
 export interface Spec extends TurboModule {
   // using Object to be compatible with paper
@@ -7,5 +8,5 @@ export interface Spec extends TurboModule {
   signOut(): Promise<null>;
 }
 
-export const OneTapNativeModule =
-  TurboModuleRegistry.getEnforcing<Spec>('RNOneTapSignIn');
+export const OneTapNativeModule = Platform.OS === 'android' ? 
+  TurboModuleRegistry.getEnforcing<Spec>('RNOneTapSignIn') : null;
